@@ -9,10 +9,75 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <span class="header__logo">&lt;/HTML&gt;</span>
+      <h1 class="header__title">закрывающий тег</h1>
+    </header>
+    <main class="content">
+      <section class="content__section">
+        <article class="content__section-card">
+          <h2 class="content__section__card-title">
+            Фритрек и нулевой спринт: Подготовка к работе
+          </h2>
+          <div class="image_wrapper">
+          <img 
+            class="content__section__card-image"
+            src="./images/car.png"
+            alt="торговый фургон с ночным небом на фоне"
+            loading="lazy"
+          >
+          <p class="watermark">&lt;/HTML&gt;</p>
+          </div>
+          <div class="card-description-wrapper">
+            <p class="content__section__card-description">
+                Это было самое начало пути. На этом этапе важно было 
+                проникнуться основами и настроиться на учёбу. И, 
+                возможно, подумать, как новые знания могут повлиять 
+                на ваше будущее.
+            </p>
+            <p class="content__section__card-description">
+              Место для ваших воспоминаний о начале обучения.
+            </p>
+            <div class="button-wrapper">
+              <button class="card__icon-button" type="button">
+                <img src="./svg/heart animation white.svg" alt="">
+              </button>
+              <button class="card__like-button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <button 
+        class="footer__button"
+        onclick="window['footer__dialog'].showModal()" 
+        aria-controls="footer__dialog"
+      >
+         <svg class="footer__button-image" viewBox="0 0 22 21">
+          <use  href="svg/floppy.svg" />
+         </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog class="footer__dialog" id="footer__dialog">
+          <svg class="footer__dialog-image" viewBox="0 0 22 21">
+            <use  href="svg/floppy.svg" />
+          </svg>
+          <span class="footer__dialog-description">Вставьте дискету, чтобы продолжить</span>
+        <button 
+          class="footer__dialog-button" 
+          onclick="window['footer__dialog'].close()" 
+          type="button"
+        ><span class="button__text">ок</span></button>
+      </dialog>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
