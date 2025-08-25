@@ -79,6 +79,7 @@
 .content__section__card-image {
   display: block;
   max-width: 100%;
+  border: 2px solid var(--accent-color);
 }
 
 .saturate {
@@ -102,7 +103,8 @@
 }
 
 .blur {
-  filter: blur(1rem);
+  filter: blur(4px);
+  overflow: hidden;
 }
 
 .multiple {
