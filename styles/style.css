@@ -28,13 +28,14 @@
   align-items: center;
   width: 100%;
   max-width: var(--block-max-width);
-  margin: 50px auto;
+  margin: 100px auto;
   border: 2px solid var(--accent-color);
-  padding:
+  padding: 
     clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem) 
-    clamp(1rem, -1.344rem + 10vw, 7.656rem);
+    clamp(1rem, -1.344rem + 10vw, 7.656rem); /* 120px 16px надо сделать*/
   font-family: var(--accent-font), serif;
   background-color: var(--main-bg-color);
+  gap: 20px;
 }
 
 .header__logo {
@@ -45,12 +46,14 @@
 .header__title {
   font-weight: 400;
   font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
+  line-height: 100%;
+  text-transform: uppercase;
 }
 
 .content {
   width: 100%;
   max-width: var(--block-max-width);
-  margin: 50px auto;
+  margin: 0 auto 50px;
 }
 
 .content__section-card {
@@ -99,7 +102,6 @@
 .button-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 12px;
   align-self: flex-end;
 }
 
@@ -110,14 +112,24 @@
 }
 
 .card__icon-button {
-  border: none;
+  border: 2px solid;
+  border-color: var(--main-bg-color);
   background-color: transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+  transition: border-color 0.3s ease;
 }
 
 .card__like-button {
   position: relative;
   border: 2px solid var(--accent-color);
-  padding: 12.5px 37px;
+  padding: 10px 35px;
   font-family: var(--accent-font), serif;
   font-weight: 400;
   font-size: 14px;
@@ -130,6 +142,7 @@
   z-index: 1;
   color: #fff;
   mix-blend-mode: difference;
+  line-height: 90%;
 }
 
 .footer {
@@ -235,6 +248,13 @@
 .footer__dialog-button:hover::after {
   transform: scaleX(1);
 }
+
+/* Анимация иконки сердца */
+.sparks {
+  opacity: 0;
+} 
+
+
 
 @media (width <= 375px) {
   .footer__button {
