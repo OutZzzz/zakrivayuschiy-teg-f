@@ -112,7 +112,7 @@
   flex-direction: row;
   justify-self: center;
   align-self: flex-end;
-  max-block-size: 38px;
+  block-size: 38px;
 }
 
 .content__section__card-description {
