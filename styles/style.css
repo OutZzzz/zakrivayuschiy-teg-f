@@ -306,6 +306,7 @@
   .content__section__card-title {
     padding: 5px 10px 6px;
   }
+
   .card-description-wrapper {
     padding: 25px 25px;
   }
@@ -314,11 +315,14 @@
     flex-direction: column;
     padding: 16px 18px
   }
+
   .footer__button-image {
     width: 28px;
     height: 28px;
   }
+
   .footer__dialog {
     max-width: 341px;
   }
+  
 }
