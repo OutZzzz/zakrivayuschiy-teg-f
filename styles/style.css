@@ -146,8 +146,10 @@
 .footer__button-image {
   width: 21px;
   height: 21px;
-  fill: white;
+  fill: #fff;
   mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
 }
 
 .footer__button {
