@@ -12,5 +12,5 @@
     --main-bg-color: #FFF;
     --block-max-width: clamp(375px, 100%, 700px);
     --contour-color: #000;
-    --sparks-color: #FF0000;
+    --fill-animation-color: #FF0000;
 }

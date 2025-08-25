@@ -26,16 +26,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   width: 100%;
   max-width: var(--block-max-width);
   margin: 100px auto;
   border: 2px solid var(--accent-color);
-  padding: 
-    clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem) 
-    clamp(1rem, -1.344rem + 10vw, 7.656rem); /* 120px 16px надо сделать*/
+  padding: 120px 16px;
   font-family: var(--accent-font), serif;
   background-color: var(--main-bg-color);
-  gap: 20px;
+    /* clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem) 
+    clamp(1rem, -1.344rem + 10vw, 7.656rem); */ /* 120px 16px надо сделать*/
 }
 
 .header__logo {
@@ -62,7 +62,7 @@
 }
 
 .content__section__card-title {
-  padding: 4px 10px;
+  padding: 6px 10px;
   font-weight: var(--title-card-font-weight);
   font-size: 18px;
 }
@@ -102,7 +102,9 @@
 .button-wrapper {
   display: flex;
   flex-direction: row;
+  justify-self: center;
   align-self: flex-end;
+  max-block-size: 38px;
 }
 
 .content__section__card-description {
@@ -129,20 +131,22 @@
 .card__like-button {
   position: relative;
   border: 2px solid var(--accent-color);
-  padding: 10px 35px;
   font-family: var(--accent-font), serif;
   font-weight: 400;
   font-size: 14px;
+  line-height: 90%;
+  text-align: center;
   background-color: transparent;
   transition: box-shadow 0.3s ease;
+  min-inline-size: 129px;
 }
 
 .button__text {
   position: relative;
   z-index: 1;
   color: #fff;
-  mix-blend-mode: difference;
   line-height: 90%;
+  mix-blend-mode: difference;
 }
 
 .footer {
@@ -157,12 +161,12 @@
 }
 
 .footer__button-image {
+  position: relative;
+  z-index: 1;
   width: 21px;
   height: 21px;
   fill: #fff;
   mix-blend-mode: difference;
-  position: relative;
-  z-index: 1;
 }
 
 .footer__button {
@@ -252,9 +256,65 @@
 /* Анимация иконки сердца */
 .sparks {
   opacity: 0;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.core {
+  transition: fill 0.3s 0.3s linear;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--fill-animation-color);
+  transition: fill 0.3s 0s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--fill-animation-color);
+  transition: fill 0.3s 0.05s linear;
 } 
 
+.like-icon.is-liked .core {
+  fill: var(--fill-animation-color);
+  transition: fill 0.3s 0s linear;
+}
 
+.like-icon.is-liked .main-body {
+  fill: var(--fill-animation-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--fill-animation-color);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: scaling 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: shine 0.3s ease-in 0.3s;
+}
+
+/* медиазапрос для контрольной точки */
 
 @media (width <= 375px) {
   .footer__button {
