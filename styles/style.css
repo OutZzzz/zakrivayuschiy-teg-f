@@ -12,7 +12,7 @@
 
 .page {
   font-family: var(--main-font), sans-serif;
-  font-weight: var(--content-card-font-weight);
+  font-variation-settings: 'wght' var(--content-card-font-weight) var(--title-card-font-weight);
   background-image: var(--background-gradient);
   background-repeat: no-repeat;
   background-position: center;
@@ -66,13 +66,14 @@
 }
 
 .content__section__card-title {
-  padding: 4px 12px;
-  font-weight: var(--title-card-font-weight);
+  padding: 3px 10px 6px;
+  font-variation-settings: 'wght' var(--title-card-font-weight);
   font-size: 18px;
 }
 
 .image_wrapper {
   position: relative;
+  max-height: 696px;
 }
 
 .content__section__card-image {
@@ -120,7 +121,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 25px 25px;
+  padding: 27px 25px;
 }
 
 .button-wrapper {
@@ -132,7 +133,7 @@
 }
 
 .content__section__card-description {
-  font-weight: var(--content-card-font-weight);
+  font-variation-settings: 'wght' var(--content-card-font-weight);
   font-size: 18px;
   line-height: 21px;
 }
@@ -200,11 +201,12 @@
   gap: 8px;
   max-width: 335px;
   border: 2px solid var(--accent-color);
-  padding: 17px 18px;
+  padding: 14px 18px;
   font-family: var(--accent-font), serif;
   font-weight: 400;
   font-size: 14px;
   text-align: start;
+  line-height: 90%;
 }
 
 .footer__dialog {
@@ -349,7 +351,7 @@
 @media (width <= 375px) {
 
   .content__section__card-title {
-    padding: 6px 14px;
+    padding: 5px 11px;
   }
 
   .footer__button {
