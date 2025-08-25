@@ -80,9 +80,17 @@
   max-width: 100%;
 }
 
-/* .test {
-  filter: blur();
-} */
+.saturate {
+  filter: saturate(0.3);
+}
+
+.hue-rotate {
+  filter: hue-rotate(24deg);
+}
+
+.invert {
+  filter: invert(1);
+}
 
 .watermark {
   position: absolute;
@@ -98,6 +106,14 @@
     1px 0 rgb(255 255 255 / 0.5),
     0 -1px rgb(255 255 255 / 0.5); /* добавить support */
   mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px rgb(255 255 255 / -0.5)) or (-webkit-text-stroke: 1px rgb(255 255 255 / -0.5))) {
+  p {
+    -webkit-text-stroke: 1px rgb(255 255 255 / -0.5);
+    text-stroke: 1px rgb(255 255 255 / -0.5);
+    text-shadow: none;
+  }
 }
 
 .card-description-wrapper {
