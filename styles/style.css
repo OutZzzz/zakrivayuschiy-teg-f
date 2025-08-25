@@ -29,13 +29,11 @@
   gap: 20px;
   width: 100%;
   max-width: var(--block-max-width);
-  margin: 100px auto;
+  margin: 100px auto 0;
   border: 2px solid var(--accent-color);
-  padding: 120px 16px;
+  padding: clamp(7.5rem, 7.324rem + 0.75vw, 8rem) 16px;
   font-family: var(--accent-font), serif;
   background-color: var(--main-bg-color);
-    /* clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem) 
-    clamp(1rem, -1.344rem + 10vw, 7.656rem); */ /* 120px 16px надо сделать*/
 }
 
 .header__logo {
@@ -53,7 +51,7 @@
 .content {
   width: 100%;
   max-width: var(--block-max-width);
-  margin: 0 auto 50px;
+  margin: 100px auto 50px;
 }
 
 .content__section-card {
@@ -62,7 +60,7 @@
 }
 
 .content__section__card-title {
-  padding: 6px 10px;
+  padding: 4px 12px;
   font-weight: var(--title-card-font-weight);
   font-size: 18px;
 }
@@ -88,7 +86,7 @@
     -1px 0 rgb(255 255 255 / 0.5),
     0 1px rgb(255 255 255 / 0.5),
     1px 0 rgb(255 255 255 / 0.5),
-    0 -1px rgb(255 255 255 / 0.5);
+    0 -1px rgb(255 255 255 / 0.5); /* добавить support */
   mix-blend-mode: hard-light;
 }
 
@@ -144,7 +142,7 @@
 .button__text {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--main-bg-color);
   line-height: 90%;
   mix-blend-mode: difference;
 }
@@ -317,6 +315,11 @@
 /* медиазапрос для контрольной точки */
 
 @media (width <= 375px) {
+
+  .content__section__card-title {
+    padding: 6px 14px;
+  }
+
   .footer__button {
     flex-direction: column;
   }
