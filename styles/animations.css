@@ -72,7 +72,9 @@
 
 @keyframes scaling {
   from {
+
     transform: scale(1); 
+  
   }
   
   to {
@@ -82,10 +84,14 @@
 
 @keyframes shine {
   from {
+
     opacity: 0;
+
   }
   
   to {
+    
     opacity: 1;
+    
   }
 }
