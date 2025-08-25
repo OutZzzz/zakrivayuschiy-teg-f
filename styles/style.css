@@ -304,11 +304,15 @@
 @media (width <= 375px) {
 
   .content__section__card-title {
-    padding: 5px 11px;
+    padding: 5px 10px 6px;
+  }
+  .card-description-wrapper {
+    padding: 25px 25px;
   }
 
   .footer__button {
     flex-direction: column;
+    padding: 16px 18px
   }
   .footer__button-image {
     width: 28px;
