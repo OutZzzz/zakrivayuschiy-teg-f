@@ -149,7 +149,7 @@
 }
 
 .card__icon-button {
-  height: 37px;
+  height: 36px;
   border: 2px solid;
   border-color: var(--main-bg-color, #fff);
   padding: 0;
