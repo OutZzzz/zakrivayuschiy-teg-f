@@ -136,13 +136,10 @@
 .button-wrapper {
   display: flex;
   flex-direction: row;
-  /* justify-self: center; */
-  /* align-self: flex-end; */
   justify-content: end;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   block-size: 38px;
-  /* height: fit-content; */
 }
 
 .content__section__card-description {
