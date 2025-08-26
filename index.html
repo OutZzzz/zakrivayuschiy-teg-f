@@ -71,7 +71,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -129,7 +129,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -186,7 +186,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -244,7 +244,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -302,7 +302,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -359,7 +359,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -417,7 +417,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -475,29 +475,29 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button" type="button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </article>
       </section>
-    </main>
-    <footer class="footer">
-      <button type="button" class="footer__button" onclick="window['footer__dialog'].showModal()" aria-controls="footer__dialog">
+      <section class="content__save">
+        <button type="button" class="content__save-button button" onclick="window['save-button-dialog'].showModal()" aria-controls="save-button-dialog">
         <svg class="footer__button-image" viewBox="0 0 22 21" aria-hidden="true">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog class="footer__dialog" id="footer__dialog">
-        <svg class="footer__dialog-image" viewBox="0 0 22 21" aria-hidden="true">
+      <dialog class="content__save-button-dialog" id="save-button-dialog">
+        <svg class="content__save-button-dialog-image" viewBox="0 0 22 21" aria-hidden="true">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
-        <span class="footer__dialog-description">Вставьте дискету, чтобы продолжить</span>
-        <button class="footer__dialog-button" onclick="window['footer__dialog'].close()" type="button"><span class="button__text">ок</span></button>
+        <span class="content__save-button-dialog-description">Вставьте дискету, чтобы продолжить</span>
+        <button class="content__save-button-dialog-button button" onclick="window['save-button-dialog'].close()" type="button"><span class="button__text">ок</span></button>
       </dialog>
-    </footer>
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
